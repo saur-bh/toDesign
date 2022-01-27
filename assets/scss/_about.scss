@@ -1,0 +1,163 @@
+
+
+
+/*===========================
+    3.ABOUT css 
+===========================*/
+
+
+
+.about-area{
+    @media #{$xs}{
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+}
+.about-image{
+    position: relative;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        background-image: url(../images/about/dots.jpg);
+        background-position: center center;
+        background-size: 100%;
+        width: 375px;
+        height: 350px;
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+        z-index: -1;
+        
+        @media #{$xs}{
+            display: none;
+        }
+        @media #{$sm}{
+            display: block;
+        }
+    }
+    
+    & .single-image{
+        width: 360px;
+        
+        @media #{$lg}{
+            width: 280px;
+        }
+        @media #{$md}{
+            width: 400px;
+        }
+        @media #{$xs}{
+            width: 100%;
+        }
+        @media #{$sm}{
+            width: 360px;
+        }
+        
+        & img{
+            width: 100%;
+        }
+        
+        &.image-tow{
+            margin-top: -200px;
+            position: relative;
+            z-index: 5;
+            
+            @media #{$lg}{
+                margin-top: -150px;
+            }
+            @media #{$xs}{
+                margin-top: 30px;
+            }
+            @media #{$sm}{
+                margin-top: -200px;
+            }
+            
+        }
+    }
+    & .about-btn{
+        position: relative;
+        margin-left: 80px;
+        margin-top: -40px;
+        display: inline-block;
+        z-index: 9;
+        
+        @media #{$xs}{
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+        }
+        
+        @media #{$sm}{
+            margin-left: 80px;
+            display: inline-block;
+            text-align: left;
+            margin-top: -50px;
+        }
+        
+        & .main-btn{
+            line-height: 58px;
+            padding: 0 40px;
+            border: 8px solid $white;
+            font-weight: 700;
+            @include box-shadow(none);
+            
+            span{
+                font-size: 35px;
+                @media #{$xs}{
+                    font-size: 28px;
+                }
+            }
+            
+            &:hover{
+                border-color: $theme-color;
+            }
+            
+            @media #{$xs}{
+                line-height: 48px;
+                padding: 0 30px;
+                font-size: 14px;
+                margin-top: -25px;
+            }
+            
+            @media #{$sm}{
+                line-height: 48px;
+                padding: 0 30px;
+                font-size: 14px;
+                margin-top: -25px;
+            }
+        }
+    }
+}
+
+
+
+
+.about-content{
+    & .about-welcome{
+        font-size: 24px;
+        color: $theme-color;
+        text-transform: uppercase;
+        
+        @media #{$xs}{
+            font-size: 18px;
+        }
+    }
+    & .about-title{
+        font-size: 35px;
+        text-transform: uppercase;
+        @media #{$xs}{
+            font-size: 26px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+
+
+
+
+
+
+/*===========================
+        6.TEAM css 
+===========================*/
+
+.team-area{
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+}
+
+
+
+.single-team{
+    
+    & .team-image{
+        & img{
+            width: 100%;
+        }
+    }
+    & .team-content{
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px 15px;
+        position: relative;
+        @include transition(0.4s);
+        
+        @media #{$lg}{
+            padding: 30px 0;
+        }
+        
+        & .team-name{
+            & a{
+                font-size: 18px;
+                font-weight: 600;
+                color: $heading-color;
+                font-family: 'Hind', sans-serif;
+                @include transition(0.4s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .sub-title{
+            font-size: 14px;
+            color: $body-text-color;
+        }
+        & .social{
+            margin-top: -35px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.4s);
+            
+            & li{
+                display: inline-block;
+                margin: 0 7px;
+                
+                & a{
+                    font-size: 16px;
+                    color: $body-text-color;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 35px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: $grey-2;
+                    @include transition(0.4s);
+                    
+                    &:hover{
+                        background-color: $theme-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    
+    &:hover{
+        & .team-content{
+            background-color: $white;
+            margin-top: -60px;
+            @include box-shadow(0px 6px 16px 0px rgba(235, 54, 86, 0.34));
+            
+            & .social{
+                margin-top: 25px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

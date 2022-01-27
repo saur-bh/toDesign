@@ -1,0 +1,155 @@
+
+
+
+
+
+/*===========================
+      7.TESTIMONIAL css 
+===========================*/
+
+
+.testimonial-area{
+    position: relative;
+    
+    @media #{$xs}{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    & .shape{
+        position: absolute;
+        
+        & img{
+            @media #{$laptop}{
+                width: 325px;
+            }
+        }
+    }
+    & .shape-one{
+        top: 25px;
+        left: 50px;
+        @media #{$laptop}{
+            left: 20px;
+        }
+    }
+    & .shape-tow{
+        left: 150px;
+        bottom: 50px;
+        @media #{$laptop}{
+            left: 70px;
+        }
+    }
+    & .shape-three{
+        right: 85px;
+        bottom: 30px;
+        @media #{$laptop}{
+            right: 35px;
+        }
+    }
+
+}
+
+.testimonial-bg{
+    position: relative;
+    z-index: 9;
+}
+
+.testimonial-active{
+    background-color: $theme-color;
+    padding: 60px 30px;
+    
+    @media #{$xs}{
+         padding: 30px 15px;
+    }
+}
+
+.single-testimonial{
+    
+    & .testimonial-image{
+        position: relative;
+        display: inline-block;
+        
+        & img{
+            border-radius: 50%;
+        }
+        
+        & .quota{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: inline-block;
+            
+            & i{
+                font-size: 18px;
+                color: $theme-color;
+                width: 30px;
+                height: 30px;
+                line-height: 28px;
+                text-align: center;
+                background-color: $white;
+                border: 2px solid $theme-color;
+                border-radius: 50%;
+            }
+        }
+    }
+    & .testimonial-content{
+        & p{
+            font-size: 18px;
+            color: $white;
+            font-family: 'Hind', sans-serif;
+        }
+        
+        & .testimonial-name{
+            font-family: 'Barlow', sans-serif;
+            font-size: 18px;
+            color: $white;
+            font-weight: 600;
+        }
+        & .sub-title{
+            font-family: 'Hind', sans-serif;
+            font-size: 14px;
+            color: $white;
+        }
+    }
+}
+
+
+.testimonial-active{
+    & .slick-dots{
+        text-align: center;
+        margin-top: 10px;
+        
+        & li{
+            display: inline-block;
+            margin: 0 5px;
+            
+            & button{
+                width: 18px;
+                height: 15px;
+                border-radius: 50px;
+                border: 0;
+                background-color: rgba(255, 255, 255, 0.5);
+                @include transition(0.4s);
+                font-size: 0;
+                cursor: pointer;
+            }
+            &.slick-active{
+                & button{
+                    background-color: $white;
+                    width: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
